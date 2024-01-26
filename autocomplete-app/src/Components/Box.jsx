@@ -33,19 +33,30 @@ function Autocomplete() {
     return (
         <>
             <div>
-                <input placeholder='Enter the country' type='text' value={value} onChange={handleChange} onKeyDown={handleKeyPress} />
-                <button>SEARCH</button>
+                <input placeholder='COUNTRY NAME' type='text' value={value} onChange={handleChange} onKeyDown={handleKeyPress} />
+                <button>
+                    S E A R C H
+                </button>
+
+
                 <div className='suggestions'>
+
                     {showSuggestions && (
                         <div>
                             {suggestions.length > 0 ? (
+
                                 suggestions.map((suggestion, index) => (
+
                                     <h3 key={index} onClick={() => handleSuggestionClick(suggestion)}>
                                         {suggestion.name}
                                     </h3>
                                 ))
                             ) : (
-                                <p>No results found</p>
+
+                                <p>
+                                    RESULTS NOT FOUND
+                                </p>
+                                
                             )}
                         </div>
                     )}

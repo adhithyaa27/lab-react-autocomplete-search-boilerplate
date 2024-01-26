@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import Autocomplete from './Components/Autocomplete'
+import Box from './Components/Box'
 
 function App() {
   return (
     <>
-      <Autocomplete/>
+      <Box/>
     </>
   )
 }
